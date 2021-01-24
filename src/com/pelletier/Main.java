@@ -10,7 +10,7 @@ public class Main {
         int index;
         int turn=1;
         myBoard.printBoard();
-        while(!win){
+        while(!myBoard.checkWin()){
             if(turn%2 != 0){
                 turn = 1;
             }else{
@@ -21,7 +21,7 @@ public class Main {
             myBoard.placePiece(turn, index);
             myBoard.printBoard();
             turn++;
-            win = myBoard.checkVerticalWin();
         }
+        System.out.println("You have won!");
     }
 }
